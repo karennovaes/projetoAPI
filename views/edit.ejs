@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Citações</title>
+</head>
+<body>
+
+<h2>Editar Citações<h2>
+        <% data.forEach(function(details) { %>
+            <form action='/edit/<%=details._id %>' method="post">
+            <input type="text" value="<%=details.citacao%>" name="citacao">
+            <input type="text" value="<%=details.ano%>" name="ano">  
+            <input type="text" value="<%=details.autor%>" name="autor">  
+            <br>
+            <button><a href="/show">Todos</a></button>
+            <button type="submit">Editar</button>
+        </form>
+            <% }) %>
+
+</body>
+</html>
